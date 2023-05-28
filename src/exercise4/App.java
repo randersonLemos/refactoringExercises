@@ -6,6 +6,10 @@ import java.util.Set;
 
 import org.junit.Assert;
 
+//
+// CODE SMELL
+// BLOATERS AND DISPENSABLES
+//
 
 public class App {
 
@@ -15,15 +19,9 @@ public class App {
 		Set s = new HashSet();
 		s.add(new Course("MC426", false));
 		s.add(new Course("MC646", true));
+		s.add(new Course("MC536", false));
 		kent.setCourses(s);
-		Assert.assertEquals(2, kent.getCourses().size());
-		Course machinelearning = new Course("MC886", true);
-		kent.getCourses().add(machinelearning);
-		kent.getCourses().add(new Course("MC536", false));
-		Assert.assertEquals(4, kent.getCourses().size());
-		kent.getCourses().remove(machinelearning);
-		Assert.assertEquals(3, kent.getCourses().size());
-
+		
 		Iterator iter = kent.getCourses().iterator();
 		int count = 0;
 		while (iter.hasNext()) {
