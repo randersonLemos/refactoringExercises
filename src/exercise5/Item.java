@@ -22,5 +22,10 @@ public class Item {
 		return 0;
 	}
 
-	//...
+	public float getTotalPrice()) {
+		float price = this.getPrice() + this.getTax();
+		if (this.isOnSale())
+			price = price - this.getSaleDiscount() * price;
+		return price;	
+	}
 }
