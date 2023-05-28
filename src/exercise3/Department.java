@@ -2,11 +2,10 @@ package exercise3;
 
 public class Department {
 
-	private String chargeCode;
 	private Person manager;
 
-	public Department(Person arg) {
-		manager = arg;
+	public Department(Person person) {
+		this.manager = person;
 	}
 
 	public Person getManager() {

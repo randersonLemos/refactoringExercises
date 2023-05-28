@@ -4,12 +4,16 @@ public class Person {
 
 	private Department department;
 
-	public void setDepartment(Department arg) {
-		department = arg;
+	public Person(Department department) {
+		this.department = department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 	public Person getManager() {
-		return department.getManager();
+		return this.department.getManager();
 	}
 
 }
